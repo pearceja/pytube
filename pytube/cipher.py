@@ -226,7 +226,7 @@ def get_transform_object(js: str, var: str) -> List[str]:
     if not transform_match:
         # i commented out the line raising the error
         # raise RegexMatchError(caller="get_transform_object", pattern=pattern)
-        logger.error(f"No match found for pattern: {pattern}")
+        # logger.error(f"No match found for pattern: {pattern}")
         return []  # Return an empty list if no match is found
 
     return transform_match.group(1).replace("\n", " ").split(", ")
